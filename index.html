@@ -1,55 +1,341 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="css/main.css"/>
+    <title>2688触屏版</title>
+    <meta name="author" content="m.2688.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?v=20130417181101" charset="gbk">
+
+   <script type="text/javascript">
+       document.write('<script src=js/' +
+    ('__proto__' in {} ? 'zepto' : 'jquery.min') +
+    '.js><\/script>')
+    </script>
+
+    <script type="text/javascript">window.jQuery = window.Zepto;</script>
+    <script type="text/javascript" src="/js/spin.min.js"></script>
+
+<link type="text/css" rel="Stylesheet" href="css/base.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" type="text/javascript">
+</script>
+
 </head>
-<body>
-	<div id="big_wrapper">
-		<header id="top_header">
-			<h1>Welcome to my lesson.</h1>
-		</header>
+<body id="body">
 
-		<nav id="top_menu">
-			<ul>
-				<li>Home</li>
-				<li>Tutorials</li>
-				<li>Podcast</li>
-			</ul>
-		</nav>
-		<div id="new_div">
-		<section id="main_section">
-			<article>
-				<header>
-					<hgroup>
-						<h1>Title of articles</h1>
-						<h2>Subtitle for article</h2>
-					</hgroup>
-				</header>
-				<p>this is my first article</p>
-				<footer>- created by Sundensky</footer>
-			</article>
-			<article>
-				<header>
-					<hgroup>
-						<h1>Title of articles2</h1>
-						<h2>Subtitle for article2</h2>
-					</hgroup>
-				</header>
-				<p>this is my second article</p>
-				<footer>- created by Sundensky</footer>
-			</article>
-		</section>
+    <a name="top"></a>
+    <header>
+        <div id="unsupport" style="cursor: pointer; font-size: 0.925em; height: 44px; line-height: 44px;
+            margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; text-align: center;
+            width: 100%; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(218, 212, 207);
+            border-top-width: 1px; border-top-style: solid; border-top-color: rgb(252, 250, 249);
+            display: none;">
+            <span>显示效果不佳？ </span><a href="/index.html?v=w" style="text-decoration: underline;
+                color: blue;">切换到标准版 </a>
+        </div>
+        <div class="header h">
+            <div class="logo fl">
+                <a href="/index.html">
+                    <img alt="logo" src="">
+                </a>
+            </div>
+            <div class="header-b fr">
+                
+                <a href="/user/home.action">
+                    <img width="22" alt="" height="21" src="image/html5/首页.png"></a>
+                <a id="html5_cart" style="cursor: pointer">
+                    <img id="html5_cart_img" alt="购物车" src="image/html5/首页购物车30.png" width="22" height="21" >
+                </a>
+                <a href="/category/all.html" >
+                    <img alt="分类" width="22" height="21" src="image/html5/首页分类30.png">
+                </a>
+            </div>
+        </div>
+    </header>
+    <form action="/ware/search.action" id="searchForm">
+    <div class="search">
+        <input name="keyword" id="keyword" type="search" class="keyword" placeholder="出游背包"
+            style="color: #999999;" autocomplete="off">
+        <input type="submit" value="搜商品" class="search-button" autocomplete="off">
+    </div>
+    </form>
+    <ul class="shelper" id="shelper" style="display: none;">
+    </ul>
+   
+    <div class="advertise w">
+        <div class="container1" id="idContainer2" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);"
+            style="text-align: center; position: relative; overflow-x: hidden; overflow-y: hidden;">
+            <div style="position: relative; height: 100px;">
+                <table id="idSlider2" border="0" cellpadding="0" cellspacing="0" style="height: 100px;
+                    position: absolute; left: -304px;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="/activity/list.action?activityId=3760">
+                                    <img src="http://www.2688.com/shouye/jiahd1.jpg"
+                                        alt="测试1" >
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/activity/list.action?activityId=3913">
+                                    <img src="http://www.2688.com/shouye/jiahd2.jpg"
+                                        alt="测试2" >
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/activity/list.action?activityId=4045">
+                                    <img src="http://www.2688.com/shouye/jiahd3.jpg"
+                                        alt="测试3" >
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/activity/list.action?activityId=3912">
+                                    <img src="http://www.2688.com/shouye/jiahd4.jpg"
+                                        alt="测试4”" style="box-shadow: -2px 2px 2px #999;">
+                                </a>
+                            </td>
+             
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul class="pic-num1" id="idNum">
+                <li class=""></li>
+                <li class="on"></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="choose">
+        <div class="manu">
+            <ul>
+                <li><a href="http://m.2688.com/emall/snmwtcd_10052_10051_.html">
+                   <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle darkviolet"></div>
+                  <div class="inner">商品分类</div>
+                </div></a></li>
+                <li><a href="#" onclick="">
+                   <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle Green"></div>
+                  <div class="inner">我的订单</div>
+                </div></a></li>
+                <li class="my2688"><a href="#" onclick="">
+                    <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle darkviolet"></div>
+                  <div class="inner">我的2688</div>
+                </div></a></li>
+                <li><a href="">
+                    <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle Green"></div>
+                  <div class="inner">购物车</div>
+                </div></a></li>
+                <li><a href="javascript:;">
+                    <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle Green"></div>
+                  <div class="inner">客户端</div>
+                </div></a></li>
+                <li><a href="javascript:;" onclick="alert('敬请期待！')">
+                    <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle darkviolet"></div>
+                  <div class="inner">客 服</div>
+                </div></a></li>
+                <li><a href="#" onclick="alert('敬请期待！')">
+                    <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle Green"></div>
+                  <div class="inner">物 流</div>
+                </div></a></li>
+                <li><a href="#" onclick="">
+                    <div class="circle">
+                  <div class="outer"></div>
+                  <div class="middle darkviolet"></div>
+                  <div class="inner">我的收藏</div>
+                </div></a></li>
+            </ul>
+        </div>
+    </div>
+   
 
-		<aside id="side_news">
-			<h4>News</h4>
-			Sundensky has a new dream!
-		</aside>
-		</div>
-		<footer id="the_footer">
-			copyright by Sundensky.
-		</footer>
-	</div>
+    <div id="hot">
+        <input type="hidden" id="sidId" value="">
+        <div class="mt">
+            <ul class="tab clear" id="modTit">
+                <li class="cur first" name="sec"><span>秒杀</span></li>
+                <li name="tuan"><span>团购</span></li>
+                <li class="last" name="crazy"><span>疯狂抢购</span></li>
+            </ul>
+        </div>
+        <div id="wait">
+        </div>
+       
+    </div>
+
+    <input type="hidden" value="12" id="activity">
+    <script type="text/javascript">
+        var picCount = $("#activity").val();
+        $(".pic-num1").css("width", (picCount * 30) + "px");
+        var forEach = function (array, callback) {
+            for (var i = 0, len = array.length; i < len; i++) { callback.call(this, array[i], i); }
+        }
+        var st = createPicMove("idContainer2", "idSlider2", picCount); //图片数量更改后需更改此数值
+        var nums = [];
+        //插入数字
+        for (var i = 0, n = st._count - 1; i <= n; i++) {
+            //(nums[i] = $("idNum").appendChild(document.createElement("li"))).innerHTML = ++i;
+            nums[i] = document.getElementById("idNum").appendChild(document.createElement("li"));
+        }
+        //设置按钮样式
+        st.onStart = function () {
+            forEach(nums, function (o, i) { o.className = st.Index == i ? "on" : ""; })
+        }
+
+        var touchX = [];
+        var touchY = [];
+        function touchMove(event) {
+            var touches = event.touches;
+            var fristTouch = touches[0];
+            var lastX = $(window).scrollLeft();
+            var lastY = $(window).scrollTop();
+            touchX.push(fristTouch.pageX);
+            touchY.push(fristTouch.pageY);
+            if (touchY.length > 1) {
+                event.preventDefault();
+                var dis = touchY[touchY.length - 2] - touchY[touchY.length - 1];
+                if (Math.abs(dis) > 50) {
+                    window.scrollTo(lastX, window.lastY + dis);
+                }
+            }
+        }
+
+        //触屏  离开屏幕事件
+        function touchEnd(event) {
+            var touches = event.touches;
+            var fristTouch = touches[0];
+
+            if (touchX != undefined && touchX.length > 1) {
+                var startX = parseInt(touchX.shift(), 10);
+                var endX = parseInt(touchX.pop(), 10);
+
+                var disValue = Math.abs(startX - endX);
+
+                if (touchY.length > 1) {
+                    var lastX = $(window).scrollLeft();
+                    event.preventDefault();
+                    var dis = touchY[touchY.length - 2] - touchY[touchY.length - 1];
+                    if (Math.abs(dis) > 50 && Math.abs(dis) > disValue) {
+                        window.scrollTo(lastX, window.lastY + dis);
+                    } else {
+                        if (disValue > 50) {
+                            event.preventDefault();
+                            bindEvent(startX, endX);
+                        }
+                    }
+                } else {
+                    if (disValue > 50) {
+                        event.preventDefault();
+                        bindEvent(startX, endX);
+                    }
+                }
+
+                touchX = [];
+                touchY = [];
+            }
+        }
+
+        /**
+        *  绑定触屏触发事件
+        * @param start
+        * @param end
+        */
+        function bindEvent(start, end) {
+            if (start >= end) {
+                st.Next();
+            } else {
+                st.Previous();
+            }
+        }
+        st.Run();
+
+    </script>
+    <footer id="footer">
+        <div class="to-top">
+            <a href="#top">回顶部</a></div>
+        <a href="/download/downApp.html">
+            <div id="down">
+            <span class="download sexybutton sexyyellow">下载2688客户端</span>
+            </div>
+        </a>
+        <div class="footer">
+            <div>
+                <a href="">登陆</a><span style="margin: 0 10px;">
+                    |</span><a rel="nofollow" href="">注册</a> 
+            </div>
+            <a href="http://m.2688.com">标准版</a><span style="margin: 0 10px;">|</span><a href="http://www.2688.com">电脑版</a>
+            <div class="gray">
+                Copyright © 2688商城 京ICP备06070881号</div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        $("ul#modTit li").click(function () {
+            $("ul#modTit li").removeClass("cur");
+            $(this).addClass("cur");
+        });
+    </script>
+    <script type="text/javascript">
+        $("#unsupport").hide();
+        if (!testLocalStorage()) { //not support html5
+            if (0 != 0 && !$clearCart && !$teamId) {
+                $("#html5_cart_num").text(0 > 0 > 0);
+            }
+        } else {
+            updateToolBar('index');
+        }
+
+        $("#html5_cart").click(function () {
+            //	syncCart('',true);
+            location.href = '/cart/cart.action';
+        });
+
+        function reSearch() {
+            var depCity = window.sessionStorage.getItem("airline_depCityName");
+            if (testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity != "") {
+                var airStr = '<form action="/airline/list.action" method="post" id="reseach">'
+        + '<input type="hidden" name="sid"  value=""/>'
+        + '<input type="hidden" name="depCity" value="' + window.sessionStorage.getItem("airline_depCityName") + '"/>'
+        + '<input type="hidden" name="arrCity" value="' + window.sessionStorage.getItem("airline_arrCityName") + '"/>'
+        + '<input type="hidden" name="depDate" value="' + window.sessionStorage.getItem("airline_depDate") + '"/>'
+        + '<input type="hidden" name="depTime" value="' + window.sessionStorage.getItem("airline_depTime") + '"/>'
+        + '<input type="hidden" name="classNo" value="' + window.sessionStorage.getItem("airline_classNo") + '"/>'
+        + '</form>';
+                $("body").append(airStr);
+                $("#reseach").submit();
+            } else {
+                window.location.href = '/airline/index.action';
+            }
+        }
+        //banner 关闭点击
+        $('.div_banner_close').click(function () {
+            $('#div_banner_header').unbind('click');
+            jQuery.post('/index/addClientCookieVal.json', function (d) {
+                $('#div_banner_header').slideUp(500);
+            });
+        });
+        //banner 下载点击
+        $('.div_banner_download').click(function () {
+            var downloadUrl = $(this).attr('url');
+            jQuery.post('/index/addClientCookieVal.json', function (d) {
+                window.location.href = downloadUrl;
+            });
+        });
+    </script>
 </body>
 </html>
